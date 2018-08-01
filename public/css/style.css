@@ -1,0 +1,31 @@
+.container {
+    padding-top:70px;
+}
+
+/* cover */
+.cover {
+    background: url("/images/landing.jpg") center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.body {
+    width: 100%;
+    min-height: 100%;
+}
+.cover .cover-inner {
+    height: 100%;
+    margin: auto;
+    display: table;
+}
+.cover .cover-inner .cover-contents {
+    margin-top: 200px;
+    text-align: center;
+}
+.cover .cover-inner .cover-contents h1 {
+    color: #009688;
+}
+
+
+.mdl-layout {
+    align-items: center;
+}
