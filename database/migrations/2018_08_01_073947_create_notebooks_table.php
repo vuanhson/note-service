@@ -16,7 +16,8 @@ class CreateNotebooksTable extends Migration
         Schema::create('notebooks', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
-            $table->string('name',500);
+            $table->string('name');
+            $table->string('description',1000);
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
         });

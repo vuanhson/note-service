@@ -1,5 +1,5 @@
 .container {
-    padding-top:70px;
+    padding-top:67px;
 }
 
 /* cover */
@@ -28,5 +28,59 @@
 
 .mdl-layout {
     align-items: center;
+}
+.mdl-cell{
+    min-width:300px;
+}
+
+.mdl-card {
+    width:300px;
+    height: 250px;
+}
+
+.mdl-card-auth {
+    width:25%;
+    height:100%;
+    min-width:300px;
+}
+
+.mdl-card-edit {
+    width:50%;
+    height:100%;
+    min-width:300px;
+}
+
+.mdl-textfield{
+    width:100%;
+}
+/*.mdl-card__actions{*/
+/*    margin: auto;*/
+/*}*/
+.mdl-card__supporting-text {
+    margin:auto;
+}
+/*add button*/
+.mdl-button--floating-action {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    padding-top: 24px;
+    margin-bottom: 0;
+    z-index: 998;
+}
+
+.mdl-dialog{
+    width:350px;
+    height:400px;
+}
+
+/*alert*/
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
 }
 
