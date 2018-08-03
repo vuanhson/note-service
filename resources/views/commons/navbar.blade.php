@@ -26,7 +26,7 @@
             </button>
             <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect"
                 for="demo-menu-lower-right">
-              <li class="mdl-menu__item">Profile</li>
+              <a href="{{ route('user.profile') }}" style="text-decoration:none; color:black;"><li class="mdl-menu__item">Profile</li></a>
               <div class="mdl-card__actions mdl-card--border"></div>
               <a href="{{ route('logout.get') }}" style="text-decoration:none; color:black;"><li class="mdl-menu__item">Sign out</li></a>
             </ul>
