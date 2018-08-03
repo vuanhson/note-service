@@ -22,9 +22,12 @@
     <body>
         @include('commons.navbar')
         @yield('cover')
-        <div class="container">
-            @include('commons.error_messages')
-            @yield('content')
-        </div>
+         
+            <div class="container">
+                <!-- Your content goes here -->
+                @include('commons.error_messages')
+                @yield('content')
+            </div>
+          
     </body>
 </html>

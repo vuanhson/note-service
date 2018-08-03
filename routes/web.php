@@ -24,6 +24,8 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('home', 'NotebookController');
-    // Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
-    // Route::resource('microposts', 'MicropostsController', ['only' => ['store', 'destroy']]);
+    Route::resource('note', 'NoteController');
+    Route::get('bookmark', 'BookmarkController@set')->name('bookmark');
+    Route::get('unbookmark', 'BookmarkController@del')->name('unbookmark');
+    Route::get('listbookmark', 'BookmarkController@list')->name('listbookmark');
 });

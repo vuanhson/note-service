@@ -14,12 +14,17 @@
       <nav class="mdl-navigation">
         @if (Auth::check())
           <!--<a class="mdl-navigation__link" href="">Link</a>-->
-
+            <a href=" {{ route('listbookmark') }} "
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:white;">
+              <i class="fas fa-bookmark"></i>
+              Bookmark
+            </button>
+            </a>
             <button type="button" class="mdl-chip mdl-chip--contact" id="demo-menu-lower-right">
                   <img src="{{ Gravatar::src(Auth::user()->email, 20) . '&d=mm' }}" alt="" class="mdl-chip__contact mdl-color--teal mdl-color-text--white">
                   <span class="mdl-chip__text">{{ Auth::user()->name }}</span>
             </button>
-            <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect"
+            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect"
                 for="demo-menu-lower-right">
               <li class="mdl-menu__item">Profile</li>
               <div class="mdl-card__actions mdl-card--border"></div>
@@ -38,9 +43,9 @@
         <span class="mdl-layout-title">My Notebooks</span>
         <nav class="mdl-navigation">
         @foreach ($notebooks as $notebook)
-          <a class="mdl-navigation__link" href="">{{ $notebook->name }}</a>
+           {!! link_to_route('note.index', $notebook->name, ['id' => $notebook->id], ['class' => 'mdl-navigation__link']) !!}
         @endforeach
-        {{ $notebooks->links() }}
+        {{ $notebooks->links('pagination.default') }}
       @else
           <span class="mdl-layout-title">My Notes</span>
           <nav class="mdl-navigation">

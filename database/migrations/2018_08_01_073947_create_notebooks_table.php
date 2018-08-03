@@ -19,7 +19,7 @@ class CreateNotebooksTable extends Migration
             $table->string('name');
             $table->string('description',1000);
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

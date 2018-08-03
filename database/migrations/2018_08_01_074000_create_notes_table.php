@@ -20,7 +20,7 @@ class CreateNotesTable extends Migration
             $table->string('content',10000);
             $table->timestamps();
             
-            $table->foreign('notebook_id')->references('id')->on('notebooks');
+            $table->foreign('notebook_id')->references('id')->on('notebooks')->onDelete('cascade');
         });
     }
 
